@@ -1,0 +1,40 @@
+BEGIN
+    // Initialize counters
+    countChar ← 0          // total characters including the period
+    countWords ← 1         // start from 1 word
+    countVowels ← 0        // number of vowels
+
+    WRITE("Enter a sentence ending with a period (.) :")
+    READ(sentence)         // read the full sentence
+
+    i ← 1                  // start from first character
+    ch ← sentence[i]       // current character
+
+    WHILE (ch ≠ '.')       // loop until the period
+        countChar ← countChar + 1
+
+        // Count vowels
+        IF (ch = 'a' OR ch = 'e' OR ch = 'i' OR
+            ch = 'o' OR ch = 'u' OR
+            ch = 'A' OR ch = 'E' OR ch = 'I' OR
+            ch = 'O' OR ch = 'U') THEN
+            countVowels ← countVowels + 1
+        ENDIF
+
+        // Count words (each space indicates a new word)
+        IF (ch = ' ') THEN
+            countWords ← countWords + 1
+        ENDIF
+
+        i ← i + 1
+        ch ← sentence[i]   // read next character
+    ENDWHILE
+
+    // Include the period in the character count
+    countChar ← countChar + 1
+
+    // Display results
+    WRITE("Sentence length = ", countChar)
+    WRITE("Number of words = ", countWords)
+    WRITE("Number of vowels = ", countVowels)
+END
