@@ -4,9 +4,9 @@
 
 This project reads a sentence ending with a period (`.`) and analyzes it by determining:
 
-    - The total number of characters (including the period)
-    - The number of words (assuming words are separated by a single space)
-    - The number of vowels (a, e, i, o, u, both uppercase and lowercase)
+- The total number of characters (including the period)
+- The number of words (assuming words are separated by a single space)
+- The number of vowels (a, e, i, o, u, both uppercase and lowercase)
 
 The program reads the sentence **character by character** and manually counts all elements **without using predefined functions** like `length()`.
 
